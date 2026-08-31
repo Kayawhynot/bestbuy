@@ -1,6 +1,6 @@
 class Product:
 
-    def __init__(self,name, price, quantity):
+    def __init__(self, name, price, quantity):
         if name == "" or price < 0 or quantity < 0:
             raise Exception("Name can't be empty. Price and quantity must be a positive!")
         self.name = name
@@ -11,11 +11,10 @@ class Product:
     def get_quantity(self):
         return self.quantity
 
-    def set_quantity(self, quantity)
+    def set_quantity(self, quantity):
         self.quantity = quantity
         if self.quantity == 0:
             self.active = False
-            print("Your ordered quantity is not available - more is on its' way")
 
     def is_active(self):
         return self.active
