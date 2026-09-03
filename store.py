@@ -18,3 +18,14 @@ class Store:
         return total
 
     def get_all_products(self):
+        active_products = []
+        for product in self.product_list:
+            if product.is_active():
+                active_products.append(product)
+        return active_products
+
+    def order(self, shopping_list):
+        total_price = 0
+        for product, amount in shopping_list:
+            total_price += product.buy(amount)
+        return total_price
