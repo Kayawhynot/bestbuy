@@ -12,11 +12,12 @@ def start(store):
         choice = input("Please enter a menu number: ")
 
         if choice == "1":
+            print("Here are all products in our store: ")
             for product in store.get_all_products():
                 product.show()
 
         elif choice == "2":
-            print(store.get_total_quantity())
+            print(f" The total quantity in store is: {store.get_total_quantity()}")
 
         # TODO (für Best Buy 2.0): Bei zu großer Bestellmenge dem Nutzer
         # die verfügbare Restmenge als Alternative anbieten statt nur abzulehnen.
@@ -62,6 +63,7 @@ def start(store):
                 )
 
         elif choice == "4":
+            print("Thanks for visiting Best Buy!")
             break
 
 
