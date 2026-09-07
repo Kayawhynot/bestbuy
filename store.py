@@ -1,6 +1,3 @@
-from products import Product
-
-
 class Store:
     """Holds a collection of Product objects and manages store-wide
     operations like ordering and inventory totals."""

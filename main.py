@@ -35,7 +35,7 @@ def start(store):
             while True:
                 chosen_product = input("Please type in your product: ")
                 product_amount = int(input("Please type in your desired amount: "))
-                exit_process = input("To finish your buying process type 'y' or enter to continue: ")
+                exit_process = input("Type 'y' to finish buy process or enter to continue: ")
 
                 for product in store.get_all_products():
                     if product.name.lower() == chosen_product.lower():
